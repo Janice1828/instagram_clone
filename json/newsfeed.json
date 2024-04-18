@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "asmishresthaa",
+    "profile": "../images/asmishrestha.png",
+    "post": "../images/asmiPost.png"
+  },
+  {
+    "id": 2,
+    "name": "aachalsharma",
+    "profile": "../images/aachalsharma.png",
+    "post": "../images/aanchalPost.png"
+  },
+  {
+    "id": 3,
+    "name": "jassitagurung",
+    "profile": "../images/jassitagurung.png",
+    "post": "../images/jassitaPost.png"
+  },
+  {
+    "id": 4,
+    "name": "cr7ronaldo",
+    "profile": "../images/ronaldo.png",
+    "post": "../images/ronaldoPost.png"
+  }
+]
