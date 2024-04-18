@@ -104,3 +104,46 @@
 #list-profile {
   border-radius: 50%;
 }
+#suggestion-section-profile-img,
+.suggestion-profile-img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.suggested-title {
+  padding: 20px 0px;
+}
+.suggested-friends-section {
+  padding: 50px 30px;
+}
+.gap-1 {
+  gap: 10px;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.gap-0 {
+  gap: 0px;
+}
+#switch-user,
+.follow-user {
+  text-decoration: none;
+
+  color: #0095f6;
+}
+.suggestion-see-all {
+  text-decoration: none;
+  color: #000;
+}
+.suggested-for-you-content {
+  color: #7a7777;
+  font-size: 15px;
+}
+.suggestion-username {
+  font-size: 14px;
+  font-weight: 550;
+}
+.suggestion-sub-title {
+  color: #958f8f;
+}
