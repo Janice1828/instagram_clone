@@ -50,12 +50,13 @@
 .justify-center {
   justify-content: center;
 }
-.align-center {
+.align-items-center {
   align-items: center;
 }
 .justify-content-between {
   justify-content: space-between;
 }
+
 .logo img {
   height: 65px;
   object-fit: contain;
@@ -63,7 +64,7 @@
 .instagram-sidebar {
   height: 98vh;
   position: sticky;
-  border-right: 1px solid #000;
+  border-right: 1px solid #d5d5d5;
   top: 0px;
   padding: 30px 30px 30px 30px;
   display: flex;
@@ -103,6 +104,7 @@
 }
 #list-profile {
   border-radius: 50%;
+  object-fit: cover;
 }
 #suggestion-section-profile-img,
 .suggestion-profile-img {
@@ -120,7 +122,7 @@
 .gap-1 {
   gap: 10px;
 }
-.flex-direction-column {
+.flex-column {
   flex-direction: column;
 }
 .gap-0 {
@@ -138,7 +140,8 @@
 }
 .suggested-for-you-content {
   color: #7a7777;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 550;
 }
 .suggestion-username {
   font-size: 14px;
@@ -146,4 +149,98 @@
 }
 .suggestion-sub-title {
   color: #958f8f;
+}
+.story-profile-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 0px;
+}
+.stories-profile-name {
+  font-size: 14px;
+}
+.post-profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#newsfeed-content {
+  justify-content: center;
+  margin-top: 30px;
+}
+.position-relative {
+  position: relative;
+}
+.insta-stories {
+  padding-bottom: 30px;
+}
+.pb-2 {
+  padding-bottom: 20px;
+}
+.post-images {
+  border-radius: 5px;
+}
+.like,
+.comment,
+.share {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+.gap-2 {
+  gap: 20px;
+}
+.like-count {
+  padding: 12px 0px;
+  font-weight: 550;
+  font-size: 14px;
+}
+#caption {
+  font-size: 14px;
+}
+.post-comment-number {
+  padding-top: 7px;
+  padding-bottom: 10px;
+}
+.mt-1 {
+  margin-top: 12px;
+}
+.add-comment {
+  border: none;
+  outline: none;
+}
+.bookmark-icon {
+  height: 20px;
+  width: 22px;
+  cursor: pointer;
+}
+.smile-icon {
+  height: 13px;
+  width: 13px;
+  cursor: pointer;
+}
+.post-comment-number {
+  font-size: 13px;
+  color: #777777;
+}
+.border-bottom {
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+}
+.story-border {
+  border: double 3px transparent;
+  border-radius: 50%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #ffce19, #f33da6);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin-bottom: 7px;
 }
