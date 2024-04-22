@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-2">
+        <div class="instagram-sidebar">
+          <div class="logo">
+            <img src="./images/instagramlogo.png" alt="Logo" />
+          </div>
+          <div class="sidebar-section">
+            <ul>
+              <li>
+                <a href="./index.html">
+                  <img src="./icons/home.png" id="home-icon" />
+                  <span>Home</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./icons/loupe.png" /><span>Search</span></a
+                >
+              </li>
+              <li>
+                <a href="./explore.html"
+                  ><img src="./icons/compass.png" /><span>Explore</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./icons/video.png" /><span>Reels</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./icons/messenger.png" /><span>Messages</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./icons/heart.png" /><span>Notificaions</span></a
+                >
+              </li>
+              <li>
+                <a href="#"><img src="./icons/tab.png" /><span>Create</span></a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="./images/asmishrestha.png"
+                    alt=""
+                    id="list-profile"
+                  /><span class="active-sidebar">Profile</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-threads-section">
+            <a href="#"
+              ><img src="./icons/threads.png" alt="" /><span>Threads</span></a
+            >
+            <a href="#"
+              ><img src="./icons/list.png" alt="" /><span>More</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-10">
+        <div class="profile-container row">
+          <div class="col-4 text-center">
+            <img
+              src="./images/jassitagurung.png"
+              alt="Profile Picture"
+              id="profile-picture"
+            />
+          </div>
+          <div class="col-8">
+            <div class="d-flex align-items-center">
+              <p class="user-name">Jassitagurung</p>
+              <button class="profile-btn">Edit Profile</button>
+              <button class="profile-btn">View Archive</button>
+              <img src="./icons/setting.png" alt="" id="setting-image" />
+            </div>
+            <div class="post-follower-following-counter">
+              <p class="pffc-count"><b>0</b> posts</p>
+              <p class="pffc-count"><b>0</b> followers</p>
+              <p class="pffc-count"><b>0</b> following</p>
+            </div>
+            <div>
+              <p id="name">Jassita</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="stories-collection">
+              <div class="collection">
+                <img
+                  src="./icons/plus.png"
+                  alt="Add Stories"
+                  class="add-stories-collection"
+                />
+                <span>New</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="post-save-tagged-container">
+              <div
+                class="d-flex justify-content-center profile-button-collection"
+              >
+                <button
+                  onclick="profileDisplayPosts()"
+                  class="post-save-tag-btn"
+                  id="btn-collection-post"
+                >
+                  POSTS
+                </button>
+                <button
+                  onclick="profileDisplaySaved()"
+                  class="post-save-tag-btn"
+                  id="btn-collection-saved"
+                >
+                  SAVED
+                </button>
+                <button
+                  onclick="profileDisplayTagged()"
+                  class="post-save-tag-btn"
+                  id="btn-collection-tagged"
+                >
+                  TAGGED
+                </button>
+              </div>
+              <div id="profile-Posts">
+                <b id="getting-started" style="margin-bottom: 290px"
+                  >Getting Started</b
+                >
+                <div class="profile-footer text-center d-flex">
+                  <a href="#">Meta</a>
+                  <a href="#">About </a>
+                  <a href="#">Blog</a>
+                  <a href="#">Jobs</a>
+                  <a href="#">Help</a>
+                  <a href="#">API</a>
+                  <a href="#">Privacy</a>
+                  <a href="#">Terms</a>
+                  <a href="#">Locations</a>
+                  <a href="#">Instagram Lite</a>
+                  <a href="#">Threads</a>
+                  <a href="#">Contact Uploading & Non-Users</a>
+                  <a href="#">Meta verified</a>
+                  <a href="#">English</a>
+                  <a href="#">&copy; 2024 Instagram from Meta</a>
+                </div>
+              </div>
+              <div id="profile-saved">
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-between">
+                    <span id="profile-saved-content"
+                      >Only You Can See What You've Saved</span
+                    >
+                    <a id="profile-add-collection" href="#">+ Add Collection</a>
+                  </div>
+                  <div
+                    class="col-12 d-flex flex-column align-items-center gap-2 justify-content-center"
+                  >
+                    <div class="profile-bookmark-img">
+                      <img
+                        src="./icons/bookmark-white.png"
+                        width="100%"
+                        alt="Book Mark"
+                      />
+                    </div>
+                    <h1>Save</h1>
+                    <p id="save-photos-vidoes">
+                      Save photos and videos that you want to see again. No<br />
+                      one is notified, and only you can see what you've saved.
+                    </p>
+                  </div>
+                  <div class="col-12 profile-footer text-center d-flex">
+                    <a href="#">Meta</a>
+                    <a href="#">About </a>
+                    <a href="#">Blog</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Help</a>
+                    <a href="#">API</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Locations</a>
+                    <a href="#">Instagram Lite</a>
+                    <a href="#">Threads</a>
+                    <a href="#">Contact Uploading & Non-Users</a>
+                    <a href="#">Meta verified</a>
+                    <a href="#">English</a>
+                    <a href="#">&copy; 2024 Instagram from Meta</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="profile-tagged"
+                class="d-flex flex-column align-items-center justify-content-center gap-2"
+              >
+                <div class="profile-icon">
+                  <img src="./icons/social-media.png" alt="Icon" />
+                </div>
+                <h1>Photos Of You</h1>
+                <p>When people tag you in photos, they'll appear here.</p>
+                <div class="profile-footer text-center d-flex">
+                  <a href="#">Meta</a>
+                  <a href="#">About </a>
+                  <a href="#">Blog</a>
+                  <a href="#">Jobs</a>
+                  <a href="#">Help</a>
+                  <a href="#">API</a>
+                  <a href="#">Privacy</a>
+                  <a href="#">Terms</a>
+                  <a href="#">Locations</a>
+                  <a href="#">Instagram Lite</a>
+                  <a href="#">Threads</a>
+                  <a href="#">Contact Uploading & Non-Users</a>
+                  <a href="#">Meta verified</a>
+                  <a href="#">English</a>
+                  <a href="#">&copy; 2024 Instagram from Meta</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="profile.js"></script>
