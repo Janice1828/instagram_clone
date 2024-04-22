@@ -95,6 +95,7 @@
   text-decoration: none;
   color: #000;
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 .sidebar-section ul li img,
@@ -102,9 +103,15 @@
   height: 22px;
   width: 22px;
 }
+#home-icon {
+  height: 25px;
+  width: 28px;
+}
 #list-profile {
   border-radius: 50%;
   object-fit: cover;
+  height: 33px;
+  width: 33px;
 }
 #suggestion-section-profile-img,
 .suggestion-profile-img {
@@ -147,6 +154,10 @@
   font-size: 14px;
   font-weight: 550;
 }
+.post-profile-name {
+  font-size: 14px;
+  font-weight: 550;
+}
 .suggestion-sub-title {
   color: #958f8f;
 }
@@ -158,11 +169,11 @@
   padding: 0px;
 }
 .stories-profile-name {
-  font-size: 14px;
+  font-size: 12px;
 }
 .post-profile-image {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -173,14 +184,24 @@
 .position-relative {
   position: relative;
 }
+.position-absolute {
+  position: absolute;
+}
+.news-feed-content {
+  padding: 0px 95px;
+}
 .insta-stories {
   padding-bottom: 30px;
 }
 .pb-2 {
   padding-bottom: 20px;
 }
+
 .post-images {
-  border-radius: 5px;
+  background-image: url(./images/jassitaPost.png);
+  height: 550px;
+  width: 450px;
+  background-size: cover;
 }
 .like,
 .comment,
@@ -239,8 +260,45 @@
   align-items: center;
   width: 60px;
   background-image: linear-gradient(white, white),
-    radial-gradient(circle at top left, #ffce19, #f33da6);
+    radial-gradient(circle at bottom left, #ffce19, #f33da6);
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
+}
+.explore-contents {
+  width: 75%;
+  margin: auto;
+  padding-top: 30px;
+  cursor: pointer;
+}
+.explore-images {
+  height: 300px;
+}
+.active-sidebar {
+  font-weight: 700;
+  font-size: 15px;
+}
+.explore-like-comment {
+  display: flex;
+  gap: 20px;
+  top: 50%;
+  left: 18%;
+  display: none;
+  transition: 0.8s;
+}
+.explore-like-comment-icon {
+  width: 20px;
+  height: 20px;
+}
+.explore-contents:hover .explore-like-comment {
+  display: flex;
+}
+.explore-contents:hover .explore-images {
+  filter: brightness(80%);
+}
+.explore-like-comments-counter {
+  color: #fff;
+  padding-left: 5px;
+  font-size: 15px;
+  font-weight: 550;
 }
