@@ -23,7 +23,7 @@ function profileDisplaySaved() {
 function profileDisplayTagged() {
   profilePosts.style.display = "none";
   profileSaved.style.display = "none";
-  profileTag.style.display = "flex";
+  profileTag.style.display = "block";
   btnTagged.style.borderTop = "1px solid";
   btnSaved.style.borderTop = "0";
   btnPost.style.borderTop = "0";
