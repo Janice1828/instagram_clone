@@ -28,3 +28,11 @@ function profileDisplayTagged() {
   btnSaved.style.borderTop = "0";
   btnPost.style.borderTop = "0";
 }
+const notificationSidebar = document.querySelector(".notification-container");
+console.log(notificationSidebar);
+const sidebar = document.getElementById("sidebar");
+const notificationButton = document.getElementById("notification-button");
+notificationButton.addEventListener("click", () => {
+  sidebar.style.display = "none";
+  notificationSidebar.style.display = "block";
+});

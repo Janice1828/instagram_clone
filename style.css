@@ -56,7 +56,6 @@
 .justify-content-between {
   justify-content: space-between;
 }
-
 .logo img {
   height: 65px;
   object-fit: contain;
@@ -69,11 +68,10 @@
   padding: 30px 30px 30px 30px;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
 .sidebar-section {
-  padding-top: 30px;
-  padding-bottom: 70px;
+  padding-top: 45px;
+  padding-bottom: 80px;
 }
 .sidebar-section ul li {
   list-style: none;
@@ -468,7 +466,7 @@
 #modal {
   position: absolute;
   z-index: 1;
-  background-color: rgb(0, 0, 0, 0.4);
+  background-color: rgb(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
 }
@@ -487,7 +485,8 @@
 #modal span {
   text-align: right;
   display: block;
-  font-size: 50px;
+  font-size: 35px;
+  color: #fff;
   width: 100%;
   cursor: pointer;
   margin-right: 40px;
@@ -525,5 +524,89 @@
 }
 #modal {
   display: none;
-  /* display: block; */
+}
+#btn-collection-post {
+  border-top: 1px solid;
+}
+.notification-logo {
+  width: 70px;
+  margin-top: 30px;
+  border: 1px solid;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notification-logo img {
+  width: 100%;
+}
+.notification-suggestion-img {
+  width: 45px;
+  height: 45px;
+}
+.notification-suggestion-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.notification-logo-text-section p {
+  font-size: 14px;
+}
+.notification-logo-text-section span {
+  font-size: 14px;
+}
+.suggested-text {
+  font-size: 14px;
+  font-weight: 550;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.notification-suggested-title-name {
+  font-size: 15px;
+  padding: 2px 0px;
+}
+.notification-suggested-subtitle {
+  font-size: 13px;
+}
+.instagram-logo {
+  width: 24px;
+}
+.instagram-logo img {
+  width: 100%;
+}
+#follow-btn {
+  background-color: #0095f6;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 20px;
+  border: none;
+  cursor: pointer;
+}
+.notification-container {
+  padding: 0px 30px;
+}
+.notification-sidebar {
+  border-right: 1px solid #c9c9c9;
+  height: 100vh;
+}
+.notification-sidebar-content {
+  padding-left: 30px;
+}
+.notification-username {
+  font-size: 14px;
+  font-weight: 550;
+}
+.notification-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 1px #cccccc;
+  height: 100vh;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }

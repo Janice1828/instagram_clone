@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Instagram</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="row">
-      <div class="col-2">
+      <div class="col-2" id="sidebar">
         <div class="instagram-sidebar">
           <div class="logo">
             <img src="./images/instagramlogo.png" alt="Logo" />
@@ -42,7 +42,7 @@
                 >
               </li>
               <li>
-                <a href="#"
+                <a href="#" id="notification-button"
                   ><img src="./icons/heart.png" /><span>Notificaions</span></a
                 >
               </li>
@@ -228,6 +228,99 @@
                   <a href="#">English</a>
                   <a href="#">&copy; 2024 Instagram from Meta</a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notification-container col-4">
+        <div class="row">
+          <div class="col-2">
+            <div class="notification-sidebar">
+              <div class="instagram-logo">
+                <img src="./images/instagram.png" alt="Logo" />
+              </div>
+              <div class="sidebar-section">
+                <ul>
+                  <li>
+                    <a href="./index.html">
+                      <img src="./icons/home.png" id="home-icon" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./icons/loupe.png" /></a>
+                  </li>
+                  <li>
+                    <a href="./explore.html"
+                      ><img src="./icons/compass.png"
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./icons/video.png" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./icons/messenger.png" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./icons/heart.png" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="./icons/tab.png" /></a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="./images/asmishrestha.png"
+                        alt=""
+                        id="list-profile"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar-threads-section">
+                <a href="#"><img src="./icons/threads.png" alt="" /></a>
+                <a href="#"><img src="./icons/list.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-10 notification-sidebar-content">
+            <div class="col-12">
+              <h2>Notifications</h2>
+            </div>
+            <div
+              class="col-12 d-flex flex-column gap-2 align-items-center notification-logo-text-section"
+            >
+              <div class="notification-logo">
+                <img src="./icons/heart.png" alt="" />
+              </div>
+              <p>Activity On Your Posts</p>
+              <span
+                >When someone likes or comments on one of your posts, you'll see
+                it here.</span
+              >
+            </div>
+            <div class="col-12">
+              <p class="suggested-text">Suggested For You</p>
+            </div>
+            <div
+              class="col-12 d-flex justify-content-between align-items-center"
+            >
+              <div class="d-flex gap-1 align-items-center">
+                <div class="notification-suggestion-img">
+                  <img src="./images/jassitagurung.png" alt="" />
+                </div>
+                <div class="d-flex flex-column justify-center">
+                  <span class="notification-username">jassitagurung12</span>
+                  <span class="notification-suggested-title-name"
+                    >Jassita Gurung</span
+                  >
+                  <span class="notification-suggested-subtitle"
+                    >Suggested for you</span
+                  >
+                </div>
+              </div>
+              <div>
+                <button id="follow-btn">Follow</button>
               </div>
             </div>
           </div>
