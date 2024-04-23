@@ -726,3 +726,52 @@
 .user-search-list {
   height: 60vh;
 }
+.additional-sidebar-lists-img {
+  height: 40px;
+  width: 40px;
+}
+.notification-container {
+  display: none;
+}
+#more-settings-lists {
+  width: 265px;
+  position: absolute;
+  bottom: 60px;
+  background-color: #fff;
+  z-index: 1;
+  left: 10px;
+  box-shadow: 0px 0px 5px 1px #d6d6d6;
+  border-radius: 10px;
+}
+#more-settings-lists li {
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 7px;
+}
+#more-settings-lists li a span,
+#more-settings-lists li a {
+  font-size: 14px !important;
+}
+#more-settings-lists ul {
+  padding: 20px 10px 0px 10px;
+}
+#more-settings-lists div {
+  padding: 10px 0px 10px 0px;
+  border-top: 4px solid #f3f3f3;
+}
+#more-settings-lists ul li:hover {
+  background-color: #f3f3f3;
+}
+#more-settings-lists div a {
+  padding: 15px 20px;
+  border-radius: 7px;
+  margin: 0px 10px;
+}
+#more-settings-lists div a:hover {
+  background-color: #f3f3f3;
+}
+#border {
+  height: 1px;
+  background-color: #f3f3f3;
+  margin: 7px 0px;
+}
