@@ -79,3 +79,12 @@ if (modal.style.display == "none") {
 // } else {
 //   console.log(modalDisplay);
 // }
+const searchContainer = document.getElementById("search-main-container");
+const search = document.getElementById("searchUser");
+const sidebarContainer = document.querySelector(".instagram-sidebar");
+search.addEventListener("click", () => {
+  searchContainer.style.display = "block";
+  console.log(searchContainer);
+  // sidebarContainer.style.display = "none";
+  //   alert("as");
+});
