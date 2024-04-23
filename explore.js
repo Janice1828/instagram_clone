@@ -29,7 +29,6 @@ const removeModalBtn = document.getElementById("removeModal");
 // } catch (err) {
 //   console.log(err);
 // }
-
 document
   .getElementById("sidebar-create-post")
   .addEventListener("click", function () {

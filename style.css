@@ -65,13 +65,13 @@
   position: sticky;
   border-right: 1px solid #d5d5d5;
   top: 0px;
-  padding: 30px 30px 30px 30px;
+  padding: 20px 30px 30px 25px;
   display: flex;
   flex-direction: column;
 }
 
 .sidebar-section {
-  padding-top: 45px;
+  padding-top: 35px;
   padding-bottom: 80px;
 }
 .sidebar-section ul li {
@@ -110,8 +110,8 @@
   width: 22px;
 }
 #home-icon {
-  height: 25px;
-  width: 28px;
+  height: 22px;
+  width: 25px;
 }
 #list-profile {
   border-radius: 50%;
@@ -774,4 +774,7 @@
   height: 1px;
   background-color: #f3f3f3;
   margin: 7px 0px;
+}
+#search-main-container {
+  display: none;
 }
