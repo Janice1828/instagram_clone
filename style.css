@@ -639,7 +639,7 @@
   left: 0;
   z-index: 1;
   background-color: #fff;
-  box-shadow: 0px 0px 4px 1px #cccccc;
+  box-shadow: 0px 0px 4px 2px #afafaf;
   height: 100vh;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;

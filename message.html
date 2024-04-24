@@ -15,7 +15,9 @@
               <div class="col-2">
                 <div class="message-sidebar">
                   <div class="instagram-logo">
-                    <img src="./images/instagram.png" alt="Logo" />
+                    <a href="index.html">
+                      <img src="./images/instagram.png" alt="Logo" />
+                    </a>
                   </div>
                   <div class="sidebar-section">
                     <ul>
@@ -48,7 +50,9 @@
                         /></a>
                       </li>
                       <li>
-                        <a href="#"><img src="./icons/tab.png" /></a>
+                        <a href="#" onclick="createPosts()"
+                          ><img src="./icons/tab.png"
+                        /></a>
                       </li>
                       <li>
                         <a href="profile.html">
@@ -149,7 +153,9 @@
             <div class="col-2">
               <div class="notification-sidebar">
                 <div class="instagram-logo">
-                  <img src="./images/instagram.png" alt="Logo" />
+                  <a href="index.html">
+                    <img src="./images/instagram.png" alt="Logo" />
+                  </a>
                 </div>
                 <div class="sidebar-section">
                   <ul>
@@ -182,7 +188,9 @@
                       /></a>
                     </li>
                     <li>
-                      <a href="#"><img src="./icons/tab.png" /></a>
+                      <a href="#" onclick="createPosts()"
+                        ><img src="./icons/tab.png"
+                      /></a>
                     </li>
                     <li>
                       <a href="#">
@@ -249,7 +257,9 @@
               <div class="col-2">
                 <div class="search-sidebar">
                   <div class="instagram-logo">
-                    <img src="./images/instagram.png" alt="Logo" />
+                    <a href="index.html">
+                      <img src="./images/instagram.png" alt="Logo"
+                    /></a>
                   </div>
                   <div class="sidebar-section">
                     <ul>
@@ -282,7 +292,9 @@
                         /></a>
                       </li>
                       <li>
-                        <a href="#"><img src="./icons/tab.png" /></a>
+                        <a href="#" onclick="createPosts()"
+                          ><img src="./icons/tab.png"
+                        /></a>
                       </li>
                       <li>
                         <a href="profile.html">
@@ -318,6 +330,29 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal">
+      <div class="modal-content">
+        <span id="removeModal">&times;</span>
+
+        <div class="create-post-card">
+          <p id="createNewPostTitle">Create New Post</p>
+          <div class="photo-uploading-section">
+            <img
+              src="./icons/multimedia.png"
+              alt="Multimedia Icon"
+              id="multimediaImages"
+            />
+            <p id="drag-photos">Drag Photos and Videos here</p>
+            <form>
+              <input type="file" id="createPostStories" hidden />
+              <label for="createPostStories" id="fileSelectBtn"
+                >Select From Computer</label
+              >
+            </form>
           </div>
         </div>
       </div>

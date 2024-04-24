@@ -71,3 +71,19 @@ function displaySearch() {
   }
   // console.log(searchStatus);
 }
+const modal = document.getElementById("modal");
+function createPosts() {
+  modal.style.display = "block";
+  let modalStatus = window.getComputedStyle(modal, null).display;
+  if ((modal.style.display = "block")) {
+    setTimeout(() => {
+      window.onclick = (e) => {
+        let location = e.target;
+        if (modalStatus == "block" && !location.closest(".create-post-card")) {
+          modal.style.display = "none";
+          modalStatus = "none";
+        }
+      };
+    }, 100);
+  }
+}
