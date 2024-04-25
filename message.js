@@ -1,4 +1,6 @@
 const sidebarExtraSettings = document.getElementById("more-settings-lists");
+const modal = document.getElementById("modal");
+
 function displayMoreSettings() {
   sidebarExtraSettings.style.display = "block";
   let modalStatus = window.getComputedStyle(sidebarExtraSettings, null).display;
@@ -38,7 +40,6 @@ function displayMoreSettings() {
 const sidebar = document.querySelector(".message-sidebar-container");
 const sidebarNotification = document.querySelector(".notification-container");
 const searchContainer = document.getElementById("search-main-container");
-console.log(sidebar);
 function displayNotification() {
   sidebar.style.display = "none";
   sidebarNotification.style.display = "block";
@@ -60,7 +61,6 @@ function displayNotification() {
           sidebar.style.display = "block";
           notificationStatus = "none";
         }
-        // console.log(location);
       };
     }, 400);
   }
@@ -87,19 +87,33 @@ function displaySearch() {
       };
     }, 400);
   }
-  // console.log(searchStatus);
 }
-const modal = document.getElementById("modal");
 function createPosts() {
   modal.style.display = "block";
-  let modalStatus = window.getComputedStyle(modal, null).display;
   if ((modal.style.display = "block")) {
     setTimeout(() => {
       window.onclick = (e) => {
         let location = e.target;
+        let modalStatus = window.getComputedStyle(modal, null).display;
+        let notificationContainerStatus = window.getComputedStyle(
+          sidebarNotification,
+          null
+        ).display;
+        let searchContainerStatus = window.getComputedStyle(
+          searchContainer,
+          null
+        ).display;
+        console.log(modalStatus);
         if (modalStatus == "block" && !location.closest(".create-post-card")) {
           modal.style.display = "none";
-          modalStatus = "none";
+        } else if (notificationContainerStatus == "block") {
+          sidebarNotification.style.display = "none";
+          sidebar.style.display = "block";
+          notificationContainerStatus = "none";
+        } else if (searchContainerStatus == "block") {
+          searchContainer.style.display = "none";
+          searchContainerStatus = "none";
+          sidebar.style.display = "block";
         }
       };
     }, 100);

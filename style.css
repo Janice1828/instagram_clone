@@ -84,7 +84,7 @@
   gap: 18px;
   align-items: center;
 }
-.sidebar-section ul {
+.main-sidebar ul {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -585,11 +585,10 @@
 .notification-suggested-subtitle {
   font-size: 13px;
 }
-.instagram-logo {
-  width: 24px;
-}
+
 .instagram-logo img {
-  width: 100%;
+  height: 22px;
+  width: 22px;
 }
 #follow-btn,
 .send-message {
@@ -600,9 +599,7 @@
   border: none;
   cursor: pointer;
 }
-.notification-container {
-  padding: 0px 30px;
-}
+
 .notification-sidebar,
 .message-sidebar,
 .search-sidebar {
@@ -613,12 +610,14 @@
 .notification-sidebar-content {
   padding-top: 30px;
 }
-.search-sidebar {
-  padding: 30px 25px 0px 25px;
+.search-sidebar,
+.notification-sidebar {
+  padding: 30px 16px 0px 16px;
 }
 .notification-sidebar-content,
 .message-sidebar-content {
   padding-left: 30px;
+  padding-right: 30px;
 }
 .search-sidebar-content {
   padding-top: 30px;
@@ -633,13 +632,12 @@
 }
 .notification-container,
 #search-main-container {
-  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
   background-color: #fff;
-  box-shadow: 0px 0px 4px 2px #afafaf;
+  box-shadow: 0px 0px 2px 0px #9f9f9f;
   height: 100vh;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -789,4 +787,15 @@
 }
 #search-main-container {
   display: none;
+}
+.border-icon {
+  border: 1px solid;
+  border-radius: 10px;
+}
+.sidebar-links {
+  width: 45px;
+  height: 45px;
+}
+.links-gap {
+  gap: 7px;
 }

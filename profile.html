@@ -8,23 +8,23 @@
   </head>
   <body>
     <div class="row">
-      <div class="col-2" id="sidebar">
+      <div class="col-2" id="instagram-sidebar-container">
         <div class="instagram-sidebar">
           <div class="logo">
-            <a href="index.html">
-              <img src="./images/instagramlogo.png" alt="Logo" />
-            </a>
+            <a href="index.html"
+              ><img src="./images/instagramlogo.png" alt="Logo"
+            /></a>
           </div>
-          <div class="sidebar-section">
+          <div class="sidebar-section main-sidebar">
             <ul>
               <li>
                 <a href="./index.html">
-                  <img src="./icons/home.png" id="home-icon" />
+                  <img src="./icons/home_white.png" id="home-icon" />
                   <span>Home</span></a
                 >
               </li>
               <li>
-                <a href="#" onclick="displaySearch()"
+                <a href="#" id="display-search" onclick="displaySearch()"
                   ><img src="./icons/loupe.png" /><span>Search</span></a
                 >
               </li>
@@ -44,10 +44,7 @@
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  id="notification-button"
-                  onclick="displayNotification()"
+                <a href="#" onclick="displayNotification()"
                   ><img src="./icons/heart.png" /><span>Notifications</span></a
                 >
               </li>
@@ -57,7 +54,7 @@
                 >
               </li>
               <li>
-                <a href="#">
+                <a href="./profile.html">
                   <img
                     src="./images/asmishrestha.png"
                     alt=""
@@ -281,45 +278,73 @@
           <div class="col-2">
             <div class="notification-sidebar">
               <div class="instagram-logo">
-                <a href="index.html">
-                  <img src="./images/instagram.png" alt="Logo" />
-                </a>
+                <a
+                  href="index.html"
+                  class="sidebar-links d-flex align-items-center justify-center"
+                >
+                  <img src="./images/instagram.png" alt="Logo"
+                /></a>
               </div>
-              <div class="sidebar-section">
-                <ul>
+              <div class="sidebar-section sub-sidebar">
+                <ul class="d-flex flex-column links-gap">
                   <li>
-                    <a href="./index.html">
-                      <img src="./icons/home.png" id="home-icon" />
+                    <a
+                      href="./index.html"
+                      class="sidebar-links d-flex align-items-center justify-center"
+                    >
+                      <img src="./icons/home_white.png" id="home-icon" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" onclick="displaySearch()"
+                    <a
+                      href="#"
+                      onclick="displaySearch()"
+                      id="remove-search"
+                      class="sidebar-links d-flex align-items-center justify-center"
                       ><img src="./icons/loupe.png"
                     /></a>
                   </li>
                   <li>
-                    <a href="./explore.html"
+                    <a
+                      href="./explore.html"
+                      class="sidebar-links d-flex align-items-center justify-center"
                       ><img src="./icons/compass.png"
                     /></a>
                   </li>
                   <li>
-                    <a href="#"><img src="./icons/video.png" /></a>
+                    <a
+                      href="#"
+                      class="sidebar-links d-flex align-items-center justify-center"
+                      ><img src="./icons/video.png"
+                    /></a>
                   </li>
                   <li>
-                    <a href="message.html"
+                    <a
+                      href="message.html"
+                      class="sidebar-links d-flex align-items-center justify-center"
                       ><img src="./icons/messenger.png"
                     /></a>
                   </li>
                   <li>
-                    <a href="#" id="remove-notification"
-                      ><img src="./icons/heart.png"
+                    <a
+                      href="#"
+                      class="border-icon sidebar-links d-flex align-items-center justify-center"
+                      id="display-notification"
+                      ><img src="./icons/heart_dark.png"
                     /></a>
                   </li>
                   <li>
-                    <a href="#"><img src="./icons/tab.png" /></a>
+                    <a
+                      href="#"
+                      class="sidebar-links d-flex align-items-center justify-center"
+                      ><img src="./icons/tab.png"
+                    /></a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a
+                      href="profile.html"
+                      class="sidebar-links d-flex align-items-center justify-center"
+                    >
                       <img
                         src="./images/asmishrestha.png"
                         alt=""
@@ -328,7 +353,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="sidebar-threads-section">
+              <div class="sidebar-threads-section align-items-center">
                 <a href="#"><img src="./icons/threads.png" alt="" /></a>
                 <a href="#" onclick="displayMoreSettings()"
                   ><img src="./icons/list.png" alt=""
@@ -385,45 +410,73 @@
             <div class="col-2">
               <div class="search-sidebar">
                 <div class="instagram-logo">
-                  <a href="index.html">
-                    <img src="./images/instagram.png" alt="Logo" />
-                  </a>
+                  <a
+                    href="index.html"
+                    class="sidebar-links d-flex align-items-center justify-center"
+                  >
+                    <img src="./images/instagram.png" alt="Logo"
+                  /></a>
                 </div>
-                <div class="sidebar-section">
-                  <ul>
+                <div class="sidebar-section sub-sidebar">
+                  <ul class="d-flex flex-column links-gap">
                     <li>
-                      <a href="./index.html">
-                        <img src="./icons/home.png" id="home-icon" />
+                      <a
+                        href="./index.html"
+                        class="sidebar-links d-flex align-items-center justify-center"
+                      >
+                        <img src="./icons/home_white.png" id="home-icon" />
                       </a>
                     </li>
                     <li>
-                      <a href="#" id="remove-search"
+                      <a
+                        href="#"
+                        id="remove-search"
+                        class="sidebar-links border-icon d-flex align-items-center justify-center"
                         ><img src="./icons/loupe.png"
                       /></a>
                     </li>
                     <li>
-                      <a href="./explore.html"
+                      <a
+                        href="./explore.html"
+                        class="sidebar-links d-flex align-items-center justify-center"
                         ><img src="./icons/compass.png"
                       /></a>
                     </li>
                     <li>
-                      <a href="#"><img src="./icons/video.png" /></a>
+                      <a
+                        href="#"
+                        class="sidebar-links d-flex align-items-center justify-center"
+                        ><img src="./icons/video.png"
+                      /></a>
                     </li>
                     <li>
-                      <a href="message.html"
+                      <a
+                        href="message.html"
+                        class="sidebar-links d-flex align-items-center justify-center"
                         ><img src="./icons/messenger.png"
                       /></a>
                     </li>
                     <li>
-                      <a href="#" onclick="displayNotification()"
+                      <a
+                        href="#"
+                        class="sidebar-links d-flex align-items-center justify-center"
+                        id="display-notification"
+                        onclick="displayNotification()"
                         ><img src="./icons/heart.png"
                       /></a>
                     </li>
                     <li>
-                      <a href="#"><img src="./icons/tab.png" /></a>
+                      <a
+                        href="#"
+                        class="sidebar-links d-flex align-items-center justify-center"
+                        ><img src="./icons/tab.png"
+                      /></a>
                     </li>
                     <li>
-                      <a href="profile.html">
+                      <a
+                        href="profile.html"
+                        class="sidebar-links d-flex align-items-center justify-center"
+                      >
                         <img
                           src="./images/asmishrestha.png"
                           alt=""
@@ -432,7 +485,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="sidebar-threads-section">
+                <div class="sidebar-threads-section align-items-center">
                   <a href="#"><img src="./icons/threads.png" alt="" /></a>
                   <a href="#" onclick="displayMoreSettings()"
                     ><img src="./icons/list.png" alt=""
