@@ -1,28 +1,42 @@
 const modal = document.getElementById("modal");
 const removeModalBtn = document.getElementById("removeModal");
 const sidebarNotification = document.querySelector(".notification-container");
-
-// document
-//   .getElementById("sidebar-create-post")
-//   .addEventListener("click", function () {
-//     modalDisplay();
-//   });
-// function modalDisplay() {
-//   modal.style.display = "block";
-//   let modalStatus = window.getComputedStyle(modal, null).display;
-//   if (modalStatus == "block") {
-//     setTimeout(() => {
-//       window.onclick = (event) => {
-//         const location = event.target;
-//         if (modalStatus == "block" && !location.closest(".create-post-card")) {
-//           modal.style.display = "none";
-//           modalStatus = "none";
-//         }
-//       };
-//     }, 100);
-//   }
-// }
 const searchContainer = document.getElementById("search-main-container");
+
+function createPosts() {
+  modal.style.display = "block";
+  let modalStatus = window.getComputedStyle(modal, null).display;
+  let searchContainerStatus = window.getComputedStyle(
+    searchContainer,
+    null
+  ).display;
+  let notificationContainerStatus = window.getComputedStyle(
+    sidebarNotification,
+    null
+  ).display;
+  if (modalStatus == "block") {
+    setTimeout(() => {
+      window.onclick = (e) => {
+        let location = e.target;
+        if (modalStatus == "block" && !location.closest(".create-post-card")) {
+          modal.style.display = "none";
+          modalStatus = "none";
+          window.addEventListener("click", () => {
+            if (searchContainerStatus == "block") {
+              sidebar.style.display = "block";
+              searchContainer.style.display = "none";
+              searchContainerStatus = "none";
+            } else if (notificationContainerStatus == "block") {
+              sidebar.style.display = "block";
+              sidebarNotification.style.display = "none";
+              notificationContainerStatus = "none";
+            }
+          });
+        }
+      };
+    }, 100);
+  }
+}
 const search = document.getElementById("searchUser");
 const sidebarContainer = document.querySelector(".instagram-sidebar");
 const sidebar = document.querySelector(".instagram-sidebar");

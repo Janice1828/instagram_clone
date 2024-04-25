@@ -57,6 +57,14 @@ const createPostmodal = document.getElementById("modal");
 function createPosts() {
   createPostmodal.style.display = "block";
   let modalStatus = window.getComputedStyle(createPostmodal, null).display;
+  let searchContainerStatus = window.getComputedStyle(
+    searchContainer,
+    null
+  ).display;
+  let notificationContainerStatus = window.getComputedStyle(
+    sidebarNotification,
+    null
+  ).display;
   if (modalStatus == "block") {
     setTimeout(() => {
       window.onclick = (event) => {
@@ -64,6 +72,17 @@ function createPosts() {
         if (modalStatus == "block" && !location.closest(".create-post-card")) {
           createPostmodal.style.display = "none";
           modalStatus = "none";
+          window.addEventListener("click", () => {
+            if (searchContainerStatus == "block") {
+              searchContainer.style.display = "none";
+              sidebar.style.display = "block";
+              searchContainerStatus = "none";
+            } else if (notificationContainerStatus == "block") {
+              sidebar.style.display = "block";
+              sidebarNotification.style.display = "none";
+              notificationContainerStatus = "none";
+            }
+          });
         }
       };
     }, 400);

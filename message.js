@@ -90,11 +90,11 @@ function displaySearch() {
 }
 function createPosts() {
   modal.style.display = "block";
-  if ((modal.style.display = "block")) {
+  let modalStatus = window.getComputedStyle(modal, null).display;
+  if ((modalStatus = "block")) {
     setTimeout(() => {
       window.onclick = (e) => {
         let location = e.target;
-        let modalStatus = window.getComputedStyle(modal, null).display;
         let notificationContainerStatus = window.getComputedStyle(
           sidebarNotification,
           null
@@ -103,18 +103,30 @@ function createPosts() {
           searchContainer,
           null
         ).display;
-        console.log(modalStatus);
         if (modalStatus == "block" && !location.closest(".create-post-card")) {
           modal.style.display = "none";
-        } else if (notificationContainerStatus == "block") {
-          sidebarNotification.style.display = "none";
-          sidebar.style.display = "block";
-          notificationContainerStatus = "none";
-        } else if (searchContainerStatus == "block") {
-          searchContainer.style.display = "none";
-          searchContainerStatus = "none";
-          sidebar.style.display = "block";
+          modalStatus = "none";
+          window.addEventListener("click", () => {
+            if (notificationContainerStatus == "block") {
+              sidebarNotification.style.display = "none";
+              sidebar.style.display = "block";
+              notificationContainerStatus = "none";
+            } else if (searchContainerStatus == "block") {
+              searchContainer.style.display = "none";
+              sidebar.style.display = "block";
+              searchContainerStatus = "none";
+            }
+          });
         }
+        // else if (notificationContainerStatus == "block") {
+        //   sidebarNotification.style.display = "none";
+        //   sidebar.style.display = "block";
+        //   notificationContainerStatus = "none";
+        // } else if (searchContainerStatus == "block") {
+        //   searchContainer.style.display = "none";
+        //   searchContainerStatus = "none";
+        //   sidebar.style.display = "block";
+        // }
       };
     }, 100);
   }
