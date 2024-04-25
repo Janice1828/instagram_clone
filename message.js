@@ -10,8 +10,26 @@ function displayMoreSettings() {
           modalStatus == "block" &&
           !location.closest("#more-settings-lists")
         ) {
-          sidebarExtraSettings.style.display = "none";
-          modalStatus = "none";
+          let notificationContainerStatus = window.getComputedStyle(
+            sidebarNotification,
+            null
+          ).display;
+          let searchContainerStatus = window.getComputedStyle(
+            searchContainer,
+            null
+          ).display;
+          if (notificationContainerStatus == "block") {
+            sidebarNotification.style.display = "none";
+            sidebar.style.display = "block";
+            notificationContainerStatus = "none";
+          } else if (searchContainerStatus == "block") {
+            searchContainer.style.display = "none";
+            sidebar.style.display = "block";
+            searchContainerStatus = "none";
+          } else {
+            sidebarExtraSettings.style.display = "none";
+            modalStatus = "none";
+          }
         }
       };
     }, 100);

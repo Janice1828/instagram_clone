@@ -85,11 +85,29 @@ function displayMoreSettings() {
           modalStatus == "block" &&
           !location.closest("#more-settings-lists")
         ) {
-          sidebarExtraSettings.style.display = "none";
-          modalStatus = "none";
+          let searchContainerStatus = window.getComputedStyle(
+            searchContainer,
+            null
+          ).display;
+          let notificationContainerStatus = window.getComputedStyle(
+            sidebarNotification,
+            null
+          ).display;
+          console.log(notificationContainerStatus);
+          if (searchContainerStatus == "block") {
+            searchContainer.style.display = "none";
+            sidebar.style.display = "block";
+            searchContainerStatus = "none";
+          } else if (notificationContainerStatus == "block") {
+            sidebarNotification.style.display = "none";
+            sidebar.style.display = "block";
+            notificationContainerStatus = "none";
+          } else {
+            sidebarExtraSettings.style.display = "none";
+            modalStatus = "none";
+          }
         }
       };
     }, 100);
   }
-  // alert("asd");
 }

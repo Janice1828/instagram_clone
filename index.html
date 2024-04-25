@@ -74,44 +74,6 @@
               <a href="#" onclick="displayMoreSettings()"
                 ><img src="./icons/list.png" alt="" /><span>More</span></a
               >
-              <div id="more-settings-lists">
-                <ul class="d-flex flex-column">
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./icons/setting.png"
-                        alt=""
-                        class="additional-sidebar-lists-img"
-                      /><span>Settings</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#">Your activity</a>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><img
-                        src="./icons/bookmark-white.png"
-                        alt=""
-                        class="additional-sidebar-lists-img"
-                      /><span>Saved</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#">Switch appearance</a>
-                  </li>
-                  <li>
-                    <a href="#">Report a problem</a>
-                  </li>
-                </ul>
-                <div class="d-flex flex-column mt-1">
-                  <a href="#" id="sidebar-switch-account-link"
-                    >Switch accounts</a
-                  >
-                  <p id="border"></p>
-                  <a href="#">Log out</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -241,6 +203,42 @@
                 <sub><a href="#" class="follow-user">Follow</a></sub>
               </div>
             </div>
+          </div>
+        </div>
+        <div id="more-settings-lists">
+          <ul class="d-flex flex-column">
+            <li>
+              <a href="#"
+                ><img
+                  src="./icons/setting.png"
+                  alt=""
+                  class="additional-sidebar-lists-img"
+                /><span>Settings</span></a
+              >
+            </li>
+            <li>
+              <a href="#">Your activity</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./icons/bookmark-white.png"
+                  alt=""
+                  class="additional-sidebar-lists-img"
+                /><span>Saved</span></a
+              >
+            </li>
+            <li>
+              <a href="#">Switch appearance</a>
+            </li>
+            <li>
+              <a href="#">Report a problem</a>
+            </li>
+          </ul>
+          <div class="d-flex flex-column mt-1">
+            <a href="#" id="sidebar-switch-account-link">Switch accounts</a>
+            <p id="border"></p>
+            <a href="#">Log out</a>
           </div>
         </div>
         <!-- for search section -->
@@ -379,7 +377,9 @@
                 </div>
                 <div class="sidebar-threads-section">
                   <a href="#"><img src="./icons/threads.png" alt="" /></a>
-                  <a href="#"><img src="./icons/list.png" alt="" /></a>
+                  <a href="#" onclick="displayMoreSettings()"
+                    ><img src="./icons/list.png" alt=""
+                  /></a>
                 </div>
               </div>
             </div>
