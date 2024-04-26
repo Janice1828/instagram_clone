@@ -46,17 +46,66 @@
           onsubmit="register()"
           class="d-flex flex-column align-items-center"
         >
-          <div class="form-group">
-            <input type="text" name="" placeholder="Mobile Number or Email" />
+          <div class="form-group position-relative">
+            <input
+              type="text"
+              name=""
+              placeholder="Mobile Number or Email"
+              id="emailOrMobile"
+              onchange="validateEmailPhone()"
+            />
+            <img
+              src="./icons/check-mark.png"
+              alt=""
+              id="email-validation-icon"
+              class="validation-icon"
+            />
           </div>
-          <div class="form-group">
-            <input type="text" name="" placeholder="Full Name" />
+          <div class="form-group position-relative">
+            <input
+              type="text"
+              name=""
+              placeholder="Full Name"
+              id="fullName"
+              onchange="validateFullName()"
+            />
+            <img
+              src="./icons/check-mark.png"
+              alt=""
+              id="fullName-validation-icon"
+              class="validation-icon"
+            />
           </div>
-          <div class="form-group">
-            <input type="text" name="" placeholder="Username" />
+          <div class="form-group position-relative">
+            <input
+              type="text"
+              name=""
+              onchange="validateUsername()"
+              placeholder="Username"
+              id="userName"
+            />
+            <img
+              src="./icons/check-mark.png"
+              alt=""
+              id="username-validation-icon"
+              class="validation-icon"
+            />
           </div>
-          <div class="form-group">
-            <input type="text" name="" placeholder="Password" />
+          <div class="form-group position-relative">
+            <input
+              type="password"
+              name=""
+              onchange="validatePassword()"
+              id="password"
+              placeholder="Password"
+            />
+            <button type="button" id="showHide">Show</button>
+            <img
+              src="./icons/check-mark.png"
+              alt=""
+              id="password-validation-icon"
+              class="validation-icon-password"
+            />
           </div>
           <div class="cookies-policy-text">
             <p>

@@ -967,7 +967,7 @@
   width: 20px;
   height: 20px;
   background-color: #fff;
-  padding: 3px;
+  padding: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -978,6 +978,9 @@
 }
 .login-form-container form .form-btn {
   margin: 7px 0px 15px 0px;
+}
+#login-btn {
+  cursor: pointer;
 }
 .registration-form-texts p {
   font-size: 14px;
@@ -1016,4 +1019,29 @@
 }
 .registation-loginFacebook span {
   font-size: 14px;
+}
+.validation-icon {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 15px;
+  top: 26%;
+  display: none;
+}
+.validation-icon-password {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 50px;
+  top: 26%;
+  display: none;
+}
+#showHide {
+  position: absolute;
+  width: auto;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  right: 0px;
+  width: 50px;
 }
