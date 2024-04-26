@@ -801,26 +801,40 @@
 .links-gap {
   gap: 7px;
 }
-.login-insta-logo {
+.login-insta-logo,
+.registration-insta-logo {
   width: 180px;
   padding-top: 30px;
 }
-.login-insta-logo img {
+.login-insta-logo img,
+.registration-insta-logo img {
   width: 100%;
 }
 .login-form-container {
   box-shadow: 0px 0px 1px 0px #000;
-  width: 360px;
+  width: 350px;
   padding: 0px 40px 20px 40px;
 }
-.login-container {
+.registration-form-container {
+  box-shadow: 0px 0px 1px 0px #000;
+  width: 350px;
+  padding: 0px 40px 20px 40px;
+}
+.registration-form-container {
+  padding-bottom: 40px;
+}
+.login-container,
+.registration-container {
   margin: 15px 0px 50px 0px;
 }
-.login-form-container form {
+.login-form-container form,
+.registration-form-container form {
   width: 100%;
   gap: 7px;
 }
-.login-form-container form div input {
+
+.login-form-container form div input,
+.registration-form-container form div input {
   width: 100%;
   padding: 10px 10px;
   font-size: 12px;
@@ -830,12 +844,14 @@
   background-color: #f8f8f8;
   box-shadow: 0px 0px 1px 0px #000;
 }
-.login-form-container form div {
+.login-form-container form div,
+.registration-form-container form div {
   width: 100%;
 }
-.login-form-container form button {
+.login-form-container form button,
+.registration-form-container form button {
   width: 100%;
-  padding: 7px 0px;
+  padding: 8px 0px;
   border: 0;
   background-color: #4cb5f9;
   color: #fff;
@@ -850,11 +866,21 @@
   display: block;
   width: 100%;
 }
-.login-registration-section {
+.registration-border-text {
+  width: 100%;
+}
+.registration-border {
+  display: block;
+  width: 100px;
+  border-bottom: 1px solid #a5a5a5;
+}
+.login-registration-section,
+.registration-login-section {
   box-shadow: 0px 0px 1px 0px #000;
   padding: 15px 0px;
 }
-.login-registration-section p a {
+.login-registration-section p a,
+.registration-login-section p a {
   text-decoration: none;
 }
 .footer-links {
@@ -865,7 +891,8 @@
   width: 889px;
   justify-content: center;
 }
-.login-registration-section p {
+.login-registration-section p,
+.registration-login-section p {
   font-size: 13px;
 }
 
@@ -888,13 +915,23 @@
   font-size: 14px;
 }
 .login-registration-section {
-  width: 360px;
+  width: 350px;
   padding: 20px 0px;
   text-align: center;
   margin-top: 10px;
 }
+#signup-btn {
+  cursor: pointer;
+}
+.registration-login-section {
+  width: 350px;
+  padding: 25px 0px;
+  text-align: center;
+  margin-top: 10px;
+}
 
-.registration-section a {
+.registration-section a,
+.registration-login-section a {
   text-decoration: none;
 }
 .play-store-logo,
@@ -912,7 +949,9 @@
   font-size: 15px;
   text-align: center;
   color: #5a5a5a;
+  margin: 15px 0px;
 }
+
 .mb-1 {
   margin-bottom: 10px;
 }
@@ -924,6 +963,57 @@
   height: 15px;
   width: 15px;
 }
+.registration-facebook-img {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registration-facebook-img img {
+  width: 100%;
+  height: 100%;
+}
 .login-form-container form .form-btn {
   margin: 7px 0px 15px 0px;
+}
+.registration-form-texts p {
+  font-size: 14px;
+  text-align: center;
+  color: #5f5f5f;
+}
+.cookies-policy-text a {
+  text-decoration: none;
+}
+.registation-loginFacebook {
+  text-decoration: none;
+  background-color: #1898eb;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+.registration-facebook {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0px;
+}
+.cookies-policy-text p {
+  font-size: 12px;
+  color: #737373;
+  text-align: center;
+}
+.cookies-policy-text {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.registation-loginFacebook span {
+  font-size: 14px;
 }

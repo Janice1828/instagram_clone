@@ -14,7 +14,11 @@
         <div class="login-insta-logo">
           <img src="./images/instagramlogo.png" alt="" />
         </div>
-        <form action="#" class="d-flex flex-column align-items-center">
+        <form
+          action="#"
+          onsubmit="login()"
+          class="d-flex flex-column align-items-center"
+        >
           <div class="form-group">
             <input
               type="text"
@@ -46,7 +50,8 @@
       </div>
       <div class="login-registration-section">
         <p>
-          Don't have an account? <a href="#" id="login-signup-link">Sign up</a>
+          Don't have an account?
+          <a href="./registration.html" id="login-signup-link">Sign up</a>
         </p>
       </div>
       <div class="get-in">
@@ -80,3 +85,4 @@
     </div>
   </body>
 </html>
+<script src="login.js"></script>
