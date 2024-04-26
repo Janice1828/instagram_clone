@@ -85,10 +85,10 @@
           </div>
           <div class="col-8">
             <div class="d-flex align-items-center">
-              <p class="user-name">Jassitagurung</p>
+              <p class="user-name"></p>
               <button class="profile-btn">Edit Profile</button>
               <button class="profile-btn">View Archive</button>
-              <a href="#"
+              <a href="#" onclick="displaySettings()"
                 ><img src="./icons/setting.png" alt="" id="setting-image"
               /></a>
             </div>
@@ -98,7 +98,7 @@
               <p class="pffc-count"><b>0</b> following</p>
             </div>
             <div>
-              <p id="name">Jassita</p>
+              <p id="name"></p>
             </div>
           </div>
           <div class="col-12">
@@ -270,7 +270,7 @@
         <div class="d-flex flex-column mt-1">
           <a href="#" id="sidebar-switch-account-link">Switch accounts</a>
           <p id="border"></p>
-          <a href="./login.html">Log out</a>
+          <a onclick="logOut()">Log out</a>
         </div>
       </div>
       <div class="notification-container col-4">
@@ -535,6 +535,20 @@
             </form>
           </div>
         </div>
+      </div>
+    </div>
+    <div id="profile-settings">
+      <div class="settings-lists">
+        <ul>
+          <li><a href="#">Apps and Websites</a></li>
+          <li><a href="#">QR Code</a></li>
+          <li><a href="#">Notifications</a></li>
+          <li><a href="#">Settings and Privacy</a></li>
+          <li><a href="#">Meta Verified</a></li>
+          <li><a href="#">Supervision</a></li>
+          <li><a href="#" onclick="logOut()">Log Out</a></li>
+          <li id="profile-settings-cancel"><a href="#">Cancel</a></li>
+        </ul>
       </div>
     </div>
   </body>

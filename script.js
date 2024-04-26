@@ -125,3 +125,11 @@ function displayMoreSettings() {
     }, 100);
   }
 }
+const loggedInStatus = sessionStorage.getItem("loggedIn");
+if (loggedInStatus) {
+  if (!loggedInStatus == "true") {
+    window.location.href = "./login.html";
+  }
+} else {
+  window.location.href = "./login.html";
+}

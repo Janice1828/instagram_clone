@@ -118,16 +118,15 @@ function createPosts() {
             }
           });
         }
-        // else if (notificationContainerStatus == "block") {
-        //   sidebarNotification.style.display = "none";
-        //   sidebar.style.display = "block";
-        //   notificationContainerStatus = "none";
-        // } else if (searchContainerStatus == "block") {
-        //   searchContainer.style.display = "none";
-        //   searchContainerStatus = "none";
-        //   sidebar.style.display = "block";
-        // }
       };
     }, 100);
   }
+}
+const loggedInStatus = sessionStorage.getItem("loggedIn");
+if (loggedInStatus) {
+  if (!loggedInStatus == "true") {
+    window.location.href = "./login.html";
+  }
+} else {
+  window.location.href = "./login.html";
 }

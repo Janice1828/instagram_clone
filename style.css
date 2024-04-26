@@ -1045,3 +1045,37 @@
   right: 0px;
   width: 50px;
 }
+#profile-settings {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.settings-lists {
+  width: 400px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.settings-lists ul li {
+  list-style: none;
+  border-bottom: 1px solid #cccccc;
+  text-align: center;
+  padding: 15px 0px;
+}
+.settings-lists ul li a {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+}
+#profile-settings-cancel {
+  border-bottom: none;
+}
+#profile-settings {
+  display: none;
+}

@@ -139,3 +139,42 @@ function createPosts() {
     }, 100);
   }
 }
+const loggedInStatus = sessionStorage.getItem("loggedIn");
+if (loggedInStatus) {
+  if (!loggedInStatus == "true") {
+    window.location.href = "./login.html";
+  }
+} else {
+  window.location.href = "./login.html";
+}
+const userName = document.querySelector(".user-name");
+const name = document.getElementById("name");
+const getUsername = localStorage.getItem("userName");
+const getfullName = localStorage.getItem("fullName");
+userName.innerHTML = getUsername;
+name.innerHTML = getfullName;
+
+function logOut() {
+  window.location.href = "./login.html";
+  sessionStorage.setItem("loggedIn", "");
+}
+const profileSetting = document.getElementById("profile-settings");
+function displaySettings() {
+  profileSetting.style.display = "flex";
+  let getSettingDisplay = window.getComputedStyle(profileSetting, null).display;
+  setTimeout(() => {
+    if (getSettingDisplay == "flex") {
+      window.onclick = (e) => {
+        let location = e.target;
+        if (
+          getSettingDisplay == "flex" &&
+          !location.closest(".settings-lists")
+        ) {
+          profileSetting.style.display = "none";
+          getSettingDisplay = "none";
+          console.log("asd");
+        }
+      };
+    }
+  }, 100);
+}
