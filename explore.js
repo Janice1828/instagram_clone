@@ -138,3 +138,41 @@ function logOut() {
   window.location.href = "./login.html";
   sessionStorage.setItem("loggedIn", "");
 }
+// fetching data
+const exploreContents = document.querySelector(".explore-contents");
+fetch("./json/explore.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((item) => {
+      const col = document.createElement("div");
+      col.className = "col-4 explore-contents-col cursor-pointer";
+      col.innerHTML = `
+      <div class="position-relative explore-images-container">
+      <img
+        src="${item.img}"
+        alt="Explore Images"
+        class="explore-images"
+      />
+      <div class="position-absolute explore-like-comment">
+        <div class="d-flex align-items-center">
+          <img
+            src="./icons/white-heart.png"
+            alt="Like"
+            class="explore-like-comment-icon"
+          />
+          <span class="explore-like-comments-counter">${item.likesCount}</span>
+        </div>
+        <div class="d-flex align-items-center">
+          <img
+            src="./icons/white-comment.png"
+            alt="Comment"
+            class="explore-like-comment-icon"
+          />
+          <span class="explore-like-comments-counter">${item.commentsCount}</span>
+        </div>
+      </div>
+    </div>
+      `;
+      exploreContents.append(col);
+    });
+  });

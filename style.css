@@ -292,13 +292,16 @@
   margin-bottom: 4px;
 }
 .explore-contents {
-  width: 75%;
+  width: 72%;
   margin: auto;
   padding-top: 30px;
-  cursor: pointer;
+  row-gap: 5px;
+  column-gap: 5px;
 }
 .explore-images {
+  width: 100%;
   height: 300px;
+  object-fit: cover;
 }
 .active-sidebar {
   font-weight: 700;
@@ -307,8 +310,8 @@
 .explore-like-comment {
   display: flex;
   gap: 20px;
-  top: 50%;
-  left: 18%;
+  top: 45%;
+  left: 26%;
   display: none;
   transition: 0.8s;
 }
@@ -316,10 +319,10 @@
   width: 20px;
   height: 20px;
 }
-.explore-contents:hover .explore-like-comment {
+.explore-contents-col:hover .explore-like-comment {
   display: flex;
 }
-.explore-contents:hover .explore-images {
+.explore-contents-col:hover .explore-images {
   filter: brightness(80%);
 }
 .explore-like-comments-counter {
@@ -1198,4 +1201,7 @@
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.explore-contents .col-4 {
+  width: calc(33.33333333% - 5px) !important;
 }
