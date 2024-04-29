@@ -2,25 +2,37 @@
   {
     "id": 1,
     "name": "asmishresthaa",
-    "profile": "../images/asmishrestha.png",
-    "post": "../images/asmiPost.png"
+    "profileImg": "../images/asmishrestha.png",
+    "postImg": "../images/asmiPost.png",
+    "likesCount": 1000,
+    "commentsCount": 30,
+    "posttext": "Ready for #psiloveyou"
   },
   {
     "id": 2,
-    "name": "aachalsharma",
-    "profile": "../images/aachalsharma.png",
-    "post": "../images/aanchalPost.png"
+    "name": "aanchalsharma",
+    "profileImg": "../images/aachalsharma.png",
+    "postImg": "../images/aanchalPost.png",
+    "likesCount": 2000,
+    "commentsCount": 40,
+    "posttext": "Hair by @binitashrestha"
   },
   {
     "id": 3,
     "name": "jassitagurung",
-    "profile": "../images/jassitagurung.png",
-    "post": "../images/jassitaPost.png"
+    "profileImg": "../images/jassitagurung.png",
+    "postImg": "../images/jassitaPost.png",
+    "likesCount": 1400,
+    "commentsCount": 3,
+    "posttext": "upcoming movie #farkifarki"
   },
   {
     "id": 4,
     "name": "cr7ronaldo",
-    "profile": "../images/ronaldo.png",
-    "post": "../images/ronaldoPost.png"
+    "profileImg": "../images/ronaldo.png",
+    "postImg": "../images/ronaldoPost.png",
+    "likesCount": 400000,
+    "commentsCount": 3000,
+    "posttext": "#MATCHDAY"
   }
 ]

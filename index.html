@@ -80,81 +80,8 @@
         <div class="col-7">
           <div class="d-flex" id="newsfeed-content">
             <div>
-              <div class="insta-stories">
-                <div class="user-stories d-flex flex-column position-relative">
-                  <div class="story-border">
-                    <img
-                      src="./images/aachalsharma.png"
-                      class="story-profile-img"
-                      alt=""
-                    />
-                  </div>
-                  <span class="stories-profile-name">norafatehi</span>
-                </div>
-              </div>
-              <div class="news-feed-content">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-content newsfeed-post">
-                      <div>
-                        <div class="d-flex align-items-center gap-1 pb-2">
-                          <img
-                            src="./images/asmishrestha.png"
-                            alt="Posts"
-                            class="post-profile-image"
-                          />
-                          <div>
-                            <p class="post-profile-name">asmishrestha</p>
-                          </div>
-                        </div>
-                        <div class="post">
-                          <div class="post-images"></div>
-                        </div>
-                        <div class="like-cmt-share mt-1">
-                          <div class="d-flex justify-content-between">
-                            <div class="d-flex gap-2">
-                              <img
-                                src="./icons/heart.png"
-                                alt=""
-                                class="like"
-                              /><img
-                                src="./icons/chat.png"
-                                alt=""
-                                class="comment"
-                              />
-                              <img
-                                src="./icons/send.png"
-                                class="share"
-                                alt=""
-                              />
-                            </div>
-                            <img
-                              src="./icons/bookmark-white.png"
-                              alt=""
-                              class="bookmark-icon"
-                            />
-                          </div>
-                          <p class="like-count">1,200 likes</p>
-                        </div>
-                        <p id="caption">
-                          <b>asmishrestha</b> Ready for #psiloveyou
-                        </p>
-                        <p class="post-comment-number">View all 62 Comments</p>
-                        <div
-                          class="add-comment d-flex justify-content-between border-bottom"
-                        >
-                          <input
-                            type="text"
-                            class="add-comment"
-                            placeholder="Add a comment..."
-                          />
-                          <img src="./icons/smile.png" class="smile-icon" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="insta-stories d-flex"></div>
+              <div id="newsfeed-posts"></div>
             </div>
           </div>
         </div>
@@ -169,8 +96,8 @@
                     alt="Profile"
                   />
                   <div class="d-flex flex-column gap-0">
-                    <p><b class="suggestion-username">lorem12</b></p>
-                    <sub><span class="suggestion-sub-title">lorem</span></sub>
+                    <p><b class="suggestion-username"></b></p>
+                    <sub><span class="suggestion-sub-title"></span></sub>
                   </div>
                 </div>
                 <sub><a href="#" id="switch-user">Switch</a></sub>
@@ -181,22 +108,7 @@
               <sub><a href="#" class="suggestion-see-all">See All</a></sub>
             </div>
             <div class="suggested-profiles">
-              <div
-                class="suggested-profiles-profile d-flex justify-content-between"
-              >
-                <div class="d-flex align-items-center gap-1">
-                  <img
-                    src="./images/jassitagurung.png"
-                    alt="Suggested User Profile"
-                    class="suggestion-profile-img"
-                  />
-                  <div class="d-flex flex-column gap-0">
-                    <p class="suggestion-username">jassitagurung</p>
-                    <sub><span class="suggestion-sub-title">popular</span></sub>
-                  </div>
-                </div>
-                <sub><a href="#" class="follow-user">Follow</a></sub>
-              </div>
+              <div class="suggested-friends-lists d-flex flex-column"></div>
             </div>
           </div>
         </div>
@@ -501,6 +413,21 @@
             </form>
           </div>
         </div>
+      </div>
+    </div>
+    <div id="post-settings">
+      <div class="settings-lists">
+        <ul>
+          <li><a href="#" class="danger-text">Report</a></li>
+          <li><a href="#" class="danger-text">Unfollow</a></li>
+          <li><a href="#">Add to favourites</a></li>
+          <li><a href="#">Go to post</a></li>
+          <li><a href="#">Share to...</a></li>
+          <li><a href="#">Copy link</a></li>
+          <li><a href="#">Embed</a></li>
+          <li><a href="#">About this account</a></li>
+          <li id="post-settings-cancel"><a href="#">Cancel</a></li>
+        </ul>
       </div>
     </div>
   </body>

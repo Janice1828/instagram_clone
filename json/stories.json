@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "jassitagurung",
+    "profile": "./images/jassitagurung.png"
+  },
+  {
+    "id": 2,
+    "name": "aanchalsharma",
+    "profile": "./images/aachalsharma.png"
+  },
+  {
+    "id": 3,
+    "name": "asmishrestha",
+    "profile": "./images/asmishrestha.png"
+  },
+  {
+    "id": 4,
+    "name": "cr7ronaldo",
+    "profile": "./images/ronaldo.png"
+  }
+]

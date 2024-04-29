@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "name": "asmishresthaa",
-    "profile": "../images/asmishrestha.png",
-    "post": "../images/asmiPost.png"
+    "name": "junethelabel",
+    "profile": "../images/junethelabel.png",
+    "suggestedon": "suggested for you"
   },
   {
     "id": 2,
-    "name": "aachalsharma",
-    "profile": "../images/aachalsharma.png",
-    "post": "../images/aanchalPost.png"
+    "name": "aakriti",
+    "profile": "../images/aakriti.png",
+    "suggestedon": "suggested for you"
   },
   {
     "id": 3,
     "name": "jassitagurung",
     "profile": "../images/jassitagurung.png",
-    "post": "../images/jassitaPost.png"
+    "suggestedon": "popular"
   },
   {
     "id": 4,
     "name": "cr7ronaldo",
     "profile": "../images/ronaldo.png",
-    "post": "../images/ronaldoPost.png"
+    "suggestedon": "popular"
   }
 ]

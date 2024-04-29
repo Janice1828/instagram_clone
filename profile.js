@@ -177,3 +177,27 @@ function displaySettings() {
     }
   }, 100);
 }
+function addCollection() {
+  const addCollection = document.getElementById("add-collection");
+  addCollection.style.display = "flex";
+  let addCollectionStatus = window.getComputedStyle(
+    addCollection,
+    null
+  ).display;
+
+  if (addCollectionStatus == "flex") {
+    setTimeout(() => {
+      window.onclick = (e) => {
+        let location = e.target;
+        if (
+          (addCollectionStatus == "flex" &&
+            !location.closest(".new-story-collection")) ||
+          location.closest(".exit-highlight-icon")
+        ) {
+          addCollection.style.display = "none";
+          addCollectionStatus = "none";
+        }
+      };
+    }, 100);
+  }
+}
