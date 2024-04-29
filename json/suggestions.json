@@ -3,24 +3,28 @@
     "id": 1,
     "name": "junethelabel",
     "profile": "../images/junethelabel.png",
-    "suggestedon": "suggested for you"
+    "suggestedon": "suggested for you",
+    "fullName": "Ishwori Shrestha"
   },
   {
     "id": 2,
     "name": "aakriti",
     "profile": "../images/aakriti.png",
-    "suggestedon": "suggested for you"
+    "suggestedon": "suggested for you",
+    "fullName": "Aakriti Lama"
   },
   {
     "id": 3,
     "name": "jassitagurung",
     "profile": "../images/jassitagurung.png",
-    "suggestedon": "popular"
+    "suggestedon": "popular",
+    "fullName": "Jassita Gurung"
   },
   {
     "id": 4,
     "name": "cr7ronaldo",
     "profile": "../images/ronaldo.png",
-    "suggestedon": "popular"
+    "suggestedon": "popular",
+    "fullName": "Cristiano Ronaldo"
   }
 ]

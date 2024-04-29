@@ -201,3 +201,38 @@ function addCollection() {
     }, 100);
   }
 }
+const notificationsuggestionlists = document.getElementById(
+  "notification-suggestion-lists"
+);
+async function fetchSuggestion() {
+  const res = await fetch("./json/suggestions.json");
+  const data = await res.json();
+
+  data.forEach((item) => {
+    let list = document.createElement("div");
+    list.innerHTML = `
+      <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex gap-1 align-items-center">
+                      <div class="notification-suggestion-img">
+                        <img src="${item.profile}" alt="" />
+                      </div>
+                      <div class="d-flex flex-column justify-center">
+                        <span class="notification-username">${item.name}</span>
+                        <span class="notification-suggested-title-name"
+                          >${item.fullName}</span
+                        >
+                        <span class="notification-suggested-subtitle"
+                          >${item.suggestedon}</span
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <button id="follow-btn">Follow</button>
+                    </div>
+                  </div>
+  
+      `;
+    notificationsuggestionlists.append(list);
+  });
+}
+fetchSuggestion();
