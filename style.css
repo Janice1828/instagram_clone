@@ -1079,3 +1079,37 @@
 #profile-settings {
   display: none;
 }
+#add-collection {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+.new-story-collection {
+  width: 300px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+.collection-header-child {
+  padding: 10px 10px;
+}
+.collection-header {
+  border-bottom: 1px solid #c2c2c2;
+}
+.collection-footer {
+  text-align: center;
+  padding: 10px 0px;
+}
+.collection-body {
+  padding: 10px 10px;
+  border-bottom: 1px solid #c2c2c2;
+}
+.collection-body input {
+  padding: 8px 10px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid;
+}

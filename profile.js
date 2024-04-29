@@ -172,7 +172,6 @@ function displaySettings() {
         ) {
           profileSetting.style.display = "none";
           getSettingDisplay = "none";
-          console.log("asd");
         }
       };
     }

@@ -133,3 +133,8 @@ if (loggedInStatus) {
 } else {
   window.location.href = "./login.html";
 }
+
+function logOut() {
+  window.location.href = "./login.html";
+  sessionStorage.setItem("loggedIn", "");
+}
