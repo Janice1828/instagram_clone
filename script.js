@@ -5,7 +5,6 @@ document.getElementById("display-search").addEventListener("click", () => {
   searchContainer.style.display = "block";
 });
 const sidebarNotification = document.querySelector(".notification-container");
-
 function displaySearch() {
   searchContainer.style.display = "block";
   sidebar.style.display = "none";

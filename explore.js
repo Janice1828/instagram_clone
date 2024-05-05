@@ -143,13 +143,14 @@ const exploreContents = document.querySelector(".explore-contents");
 fetch("./json/explore.json")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((item) => {
+    // data.forEach((item) => {
+    for (let i = 0; i < data.length; i++) {
       const col = document.createElement("div");
       col.className = "col-4 explore-contents-col cursor-pointer";
       col.innerHTML = `
       <div class="position-relative explore-images-container">
       <img
-        src="${item.img}"
+        src="${data[i].img}"
         alt="Explore Images"
         class="explore-images"
       />
@@ -160,7 +161,7 @@ fetch("./json/explore.json")
             alt="Like"
             class="explore-like-comment-icon"
           />
-          <span class="explore-like-comments-counter">${item.likesCount}</span>
+          <span class="explore-like-comments-counter">${data[i].likesCount}</span>
         </div>
         <div class="d-flex align-items-center">
           <img
@@ -168,13 +169,467 @@ fetch("./json/explore.json")
             alt="Comment"
             class="explore-like-comment-icon"
           />
-          <span class="explore-like-comments-counter">${item.commentsCount}</span>
+          <span class="explore-like-comments-counter">${data[i].commentsCount}</span>
         </div>
       </div>
     </div>
       `;
       exploreContents.append(col);
-    });
+      col.addEventListener("click", () => {
+        let exploreDetails = document.querySelector(".explore-details");
+        exploreDetails.style.display = "block";
+        exploreDetails.innerHTML = `
+        <div class="row">
+        <div class="col-2 d-flex align-items-center" style="padding-left: 10px">
+          <div
+            class="back-icon d-flex justify-content-center align-items-center cursor-pointer"
+          >
+            <img src="./icons/back.png" alt="" />
+          </div>
+        </div>
+        <div class="col-8" id="explore-details-main-content">
+          <div class="d-flex">
+            <div class="explore-details-img w-50" style="height: 94vh">
+              <img
+                src="${data[i].img}"
+                alt=""
+                height="100%"
+                id="explore-details-main-img"
+              />
+            </div>
+            <div class="explore-details-comments w-50">
+              <div
+                class="explore-user-details d-flex justify-content-between align-items-center"
+              >
+                <div class="d-flex align-items-center gap-1">
+                  <div class="explore-user-details-profile">
+                    <img src="./images/aakriti.png" alt="" />
+                  </div>
+                  <span>aakriti5</span>
+                </div>
+                <div class="more-option-logo">
+                  <img src="./icons/dots.png" alt="" class="cursor-pointer" />
+                </div>
+              </div>
+              <div class="explore-comments-lists d-flex flex-column gap-1">
+                <div class="explore-comments d-flex gap-1 align-items-center">
+                  <div class="explore-user-details-profile">
+                    <img src="./images/aakriti.png" alt="" />
+                  </div>
+                  <div class="explore-details-username">
+                    <p class="d-flex gap-1">
+                      <span id="username">aakriti5</span
+                      ><span id="post-thumbnail">${data[i].caption}</span>
+                    </p>
+                    <p id="postTime">1d</p>
+                  </div>
+                </div>
+                <div class="explore-comments d-flex gap-1 align-items-center">
+                  <div class="explore-details-commentors">
+                    <img src="./images/asmishrestha.png" alt="" />
+                  </div>
+                  <div class="explore-details-username">
+                    <p class="d-flex gap-1">
+                      <span id="username">loremip</span
+                      ><span id="post-thumbnail">Polka Dot Summer Top</span>
+                    </p>
+                    <p id="postTime">1d</p>
+                  </div>
+                </div>
+              </div>
+              <div class="explore-details-card-footer">
+                <div class="border-footer">
+                  <div class="d-flex justify-content-between">
+                    <div class="explore-details-icons-collection d-flex gap-2">
+                      <img
+                        src="./icons/heart.png"
+                        alt=""
+                        class="cursor-pointer"
+                      />
+                      <img
+                        src="./icons/chat.png"
+                        alt=""
+                        class="cursor-pointer"
+                      />
+                      <img
+                        src="./icons/send.png"
+                        alt=""
+                        class="cursor-pointer"
+                      />
+                    </div>
+                    <div class="explore-bookmark-icon">
+                      <img
+                        src="./icons/bookmark-white.png"
+                        alt=""
+                        class="cursor-pointer"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <p id="explore-details-likes-counter">Likes</p>
+                    <p id="explore-details-time-counter">2 days ago</p>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 comments-section">
+                  <div class="emoji-icon">
+                    <img
+                      src="./icons/smile.png"
+                      alt=""
+                      class="cursor-pointer"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    id="explore-detail-input"
+                    placeholder="Add a comment..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-2 d-flex flex-column justify-content-between"
+          style="align-items: flex-end; padding-right: 10px"
+        >
+          <img
+            src="./icons/icons8-cross-50.png"
+            alt=""
+            id="explore-details-close"
+            class="cursor-pointer"
+          />
+          <div
+            class="next-icon d-flex justify-content-center align-items-center cursor-pointer"
+            
+          >
+            <img src="./icons/next.png" alt="" />
+          </div>
+          <div></div>
+        </div>
+      </div>
+        `;
+        console.log(data[i].id);
+        if (data[i].id == 1) {
+          document.querySelector(".back-icon").style.display = "none";
+        } else if (data[i].id == 7) {
+          document.querySelector(".next-icon").style.display = "none";
+        }
+        document
+          .querySelector(".next-icon")
+          .addEventListener("click", nextData);
+        document
+          .querySelector(".back-icon")
+          .addEventListener("click", previousData);
+        let id = i;
+        function previousData() {
+          id--;
+          exploreDetails.innerHTML = `
+          <div class="row">
+          <div class="col-2 d-flex align-items-center" style="padding-left: 10px">
+            <div
+              class="back-icon d-flex justify-content-center align-items-center cursor-pointer"
+            >
+              <img src="./icons/back.png" alt="" />
+            </div>
+          </div>
+          <div class="col-8" id="explore-details-main-content">
+            <div class="d-flex">
+              <div class="explore-details-img w-50" style="height: 94vh">
+                <img
+                  src="${data[id].img}"
+                  alt=""
+                  height="100%"
+                  id="explore-details-main-img"
+                />
+              </div>
+              <div class="explore-details-comments w-50">
+                <div
+                  class="explore-user-details d-flex justify-content-between align-items-center"
+                >
+                  <div class="d-flex align-items-center gap-1">
+                    <div class="explore-user-details-profile">
+                      <img src="./images/aakriti.png" alt="" />
+                    </div>
+                    <span>aakriti5</span>
+                  </div>
+                  <div class="more-option-logo">
+                    <img src="./icons/dots.png" alt="" class="cursor-pointer" />
+                  </div>
+                </div>
+                <div class="explore-comments-lists d-flex flex-column gap-1">
+                  <div class="explore-comments d-flex gap-1 align-items-center">
+                    <div class="explore-user-details-profile">
+                      <img src="./images/aakriti.png" alt="" />
+                    </div>
+                    <div class="explore-details-username">
+                      <p class="d-flex gap-1">
+                        <span id="username">aakriti5</span
+                        ><span id="post-thumbnail">Polka Dot Summer Top</span>
+                      </p>
+                      <p id="postTime">1d</p>
+                    </div>
+                  </div>
+                  <div class="explore-comments d-flex gap-1 align-items-center">
+                    <div class="explore-details-commentors">
+                      <img src="./images/asmishrestha.png" alt="" />
+                    </div>
+                    <div class="explore-details-username">
+                      <p class="d-flex gap-1">
+                        <span id="username">loremip</span
+                        ><span id="post-thumbnail">Polka Dot Summer Top</span>
+                      </p>
+                      <p id="postTime">1d</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="explore-details-card-footer">
+                  <div class="border-footer">
+                    <div class="d-flex justify-content-between">
+                      <div class="explore-details-icons-collection d-flex gap-2">
+                        <img
+                          src="./icons/heart.png"
+                          alt=""
+                          class="cursor-pointer"
+                        />
+                        <img
+                          src="./icons/chat.png"
+                          alt=""
+                          class="cursor-pointer"
+                        />
+                        <img
+                          src="./icons/send.png"
+                          alt=""
+                          class="cursor-pointer"
+                        />
+                      </div>
+                      <div class="explore-bookmark-icon">
+                        <img
+                          src="./icons/bookmark-white.png"
+                          alt=""
+                          class="cursor-pointer"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <p id="explore-details-likes-counter">Likes</p>
+                      <p id="explore-details-time-counter">2 days ago</p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 comments-section">
+                    <div class="emoji-icon">
+                      <img
+                        src="./icons/smile.png"
+                        alt=""
+                        class="cursor-pointer"
+                      />
+                    </div>
+                    <input
+                      type="text"
+                      id="explore-detail-input"
+                      placeholder="Add a comment..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-2 d-flex flex-column justify-content-between"
+            style="align-items: flex-end; padding-right: 10px"
+          >
+            <img
+              src="./icons/icons8-cross-50.png"
+              alt=""
+              id="explore-details-close"
+              class="cursor-pointer"
+            />
+            <div
+              class="next-icon d-flex justify-content-center align-items-center cursor-pointer"
+            >
+              <img src="./icons/next.png" alt="" />
+            </div>
+            <div></div>
+          </div>
+        </div>
+
+          `;
+          document
+            .querySelector(".next-icon")
+            .addEventListener("click", nextData);
+          if (id > 0) {
+            document
+              .querySelector(".back-icon")
+              .addEventListener("click", previousData);
+          } else {
+            document.querySelector(".back-icon").style.display = "none";
+          }
+        }
+        function nextData() {
+          id++;
+          exploreDetails.innerHTML = `
+          <div class="row">
+          <div class="col-2 d-flex align-items-center" style="padding-left: 10px">
+            <div
+              class="back-icon d-flex justify-content-center align-items-center cursor-pointer"
+            >
+              <img src="./icons/back.png" alt="" />
+            </div>
+          </div>
+          <div class="col-8" id="explore-details-main-content">
+            <div class="d-flex">
+              <div class="explore-details-img w-50" style="height: 94vh">
+                <img
+                  src="${data[id].img}"
+                  alt=""
+                  height="100%"
+                  id="explore-details-main-img"
+                />
+              </div>
+              <div class="explore-details-comments w-50">
+                <div
+                  class="explore-user-details d-flex justify-content-between align-items-center"
+                >
+                  <div class="d-flex align-items-center gap-1">
+                    <div class="explore-user-details-profile">
+                      <img src="./images/aakriti.png" alt="" />
+                    </div>
+                    <span>aakriti5</span>
+                  </div>
+                  <div class="more-option-logo">
+                    <img src="./icons/dots.png" alt="" class="cursor-pointer" />
+                  </div>
+                </div>
+                <div class="explore-comments-lists d-flex flex-column gap-1">
+                  <div class="explore-comments d-flex gap-1 align-items-center">
+                    <div class="explore-user-details-profile">
+                      <img src="./images/aakriti.png" alt="" />
+                    </div>
+                    <div class="explore-details-username">
+                      <p class="d-flex gap-1">
+                        <span id="username">aakriti5</span
+                        ><span id="post-thumbnail">Polka Dot Summer Top</span>
+                      </p>
+                      <p id="postTime">1d</p>
+                    </div>
+                  </div>
+                  <div class="explore-comments d-flex gap-1 align-items-center">
+                    <div class="explore-details-commentors">
+                      <img src="./images/asmishrestha.png" alt="" />
+                    </div>
+                    <div class="explore-details-username">
+                      <p class="d-flex gap-1">
+                        <span id="username">loremip</span
+                        ><span id="post-thumbnail">Polka Dot Summer Top</span>
+                      </p>
+                      <p id="postTime">1d</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="explore-details-card-footer">
+                  <div class="border-footer">
+                    <div class="d-flex justify-content-between">
+                      <div class="explore-details-icons-collection d-flex gap-2">
+                        <img
+                          src="./icons/heart.png"
+                          alt=""
+                          class="cursor-pointer"
+                        />
+                        <img
+                          src="./icons/chat.png"
+                          alt=""
+                          class="cursor-pointer"
+                        />
+                        <img
+                          src="./icons/send.png"
+                          alt=""
+                          class="cursor-pointer"
+                        />
+                      </div>
+                      <div class="explore-bookmark-icon">
+                        <img
+                          src="./icons/bookmark-white.png"
+                          alt=""
+                          class="cursor-pointer"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <p id="explore-details-likes-counter">Likes</p>
+                      <p id="explore-details-time-counter">2 days ago</p>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2 comments-section">
+                    <div class="emoji-icon">
+                      <img
+                        src="./icons/smile.png"
+                        alt=""
+                        class="cursor-pointer"
+                      />
+                    </div>
+                    <input
+                      type="text"
+                      id="explore-detail-input"
+                      placeholder="Add a comment..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-2 d-flex flex-column justify-content-between"
+            style="align-items: flex-end; padding-right: 10px"
+          >
+            <img
+              src="./icons/icons8-cross-50.png"
+              alt=""
+              id="explore-details-close"
+              class="cursor-pointer"
+            />
+            <div
+              class="next-icon d-flex justify-content-center align-items-center cursor-pointer"
+            >
+              <img src="./icons/next.png" alt="" />
+            </div>
+            <div></div>
+          </div>
+        </div>
+
+          `;
+          document
+            .querySelector(".back-icon")
+            .addEventListener("click", previousData);
+          if (id == data.length - 1) {
+            document.querySelector(".next-icon").style.display = "none";
+          }
+          if (id < data.length - 1) {
+            document
+              .querySelector(".next-icon")
+              .addEventListener("click", nextData);
+          }
+        }
+        let exploreDetailsStatus = window.getComputedStyle(
+          exploreDetails,
+          null
+        ).display;
+        if (exploreDetailsStatus == "block") {
+          setTimeout(() => {
+            window.onclick = (e) => {
+              let location = e.target;
+              if (
+                exploreDetailsStatus == "block" &&
+                !location.closest("#explore-details-main-content") &&
+                !location.closest(".next-icon") &&
+                !location.closest(".back-icon")
+              ) {
+                exploreDetails.style.display = "none";
+                exploreDetailsStatus = "none";
+              }
+            };
+          }, 100);
+        }
+      });
+    }
   });
 const notificationsuggestionlists = document.getElementById(
   "notification-suggestion-lists"
@@ -182,7 +637,6 @@ const notificationsuggestionlists = document.getElementById(
 async function fetchSuggestion() {
   const res = await fetch("./json/suggestions.json");
   const data = await res.json();
-
   data.forEach((item) => {
     let list = document.createElement("div");
     list.innerHTML = `

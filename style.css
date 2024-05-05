@@ -1211,8 +1211,11 @@
 }
 .explore-details-img img {
   width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .explore-details {
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0, 0.5);
@@ -1220,6 +1223,7 @@
   top: 0;
   color: #fff;
   padding: 0px 30px;
+  padding: 15px 0px;
 }
 .explore-details-comments {
   background-color: #fff;
@@ -1231,4 +1235,95 @@
 #explore-details-close {
   width: 30px;
   height: 30px;
+}
+.explore-user-details-profile {
+  width: 28px;
+}
+.explore-user-details-profile img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.explore-user-details {
+  border-bottom: 1px solid #a9a9a9;
+  padding: 10px 20px;
+}
+.explore-comments-lists {
+  padding: 15px 20px;
+}
+.explore-user-details span,
+#username {
+  font-size: 14px;
+  font-weight: 550;
+}
+#postTime {
+  font-size: 12px;
+}
+.more-option-logo {
+  width: 20px;
+}
+.more-option-logo img {
+  width: 100%;
+}
+#post-thumbnail {
+  font-size: 14px;
+}
+.explore-details-commentors {
+  width: 28px;
+  height: 28px;
+}
+.explore-details-commentors img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.explore-details-icons-collection img,
+.explore-bookmark-icon img,
+.emoji-icon img {
+  width: 22px;
+  height: 22px;
+}
+#explore-detail-input {
+  border: none;
+  outline: none;
+}
+.explore-details-card-footer .border-footer {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+}
+.comments-section {
+  padding: 15px 20px;
+}
+.explore-details-card-footer {
+  position: fixed;
+  bottom: 27px;
+  width: 506px;
+}
+#explore-details-likes-counter {
+  font-size: 14px;
+  padding: 10px 0px 5px 0px;
+  font-weight: 550;
+}
+
+#explore-details-time-counter {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.next-icon,
+.back-icon {
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.next-icon img,
+.back-icon img {
+  width: 100%;
+  height: 100%;
+}
+.next-icon {
+  margin-bottom: 30px;
 }

@@ -3,42 +3,64 @@
     "id": 1,
     "img": "./images/explore-a.jpg",
     "likesCount": 3000,
-    "commentsCount": "10"
+    "commentsCount": "10",
+    "uploadedon": "2 days ago",
+    "name": "adventerousguy",
+    "caption": "nothing feels like stars.",
+    "profile": "../images/aakriti.png"
   },
   {
     "id": 2,
     "img": "./images/explore-c.jpg",
     "likesCount": 1200,
-    "commentsCount": "110"
+    "commentsCount": "110",
+    "uploadedon": "1 days ago"
   },
   {
     "id": 3,
     "img": "./images/explore-b.jpg",
     "likesCount": 1400,
-    "commentsCount": "20"
+    "commentsCount": "20",
+    "uploadedon": "5 hour ago",
+    "name": "Nepal 8th Wonder",
+    "caption": "Dhorpatan",
+    "profile": "../images/aachalsharma.png"
   },
   {
     "id": 4,
     "img": "./images/explore-d.jpg",
     "likesCount": 2200,
-    "commentsCount": "30"
+    "commentsCount": "30",
+    "uploadedon": "5 days ago",
+    "name": "joenadoe",
+    "caption": "in the wilds",
+    "profile": "../images/explore-a.jpg"
   },
   {
     "id": 5,
     "img": "./images/jassitapost.png",
     "likesCount": 2000,
-    "commentsCount": "2"
+    "commentsCount": "2",
+    "uploadedon": "12 days ago",
+    "name": "jassitagurung",
+    "caption": "#farkifarki",
+    "profile": "../images/jassitagurung.png"
   },
   {
     "id": 6,
     "img": "./images/ronaldoPost.png",
     "likesCount": 5100,
-    "commentsCount": "50"
+    "commentsCount": "50",
+    "uploadedon": "5 minutes ago",
+    "name": "cristianoronaldo",
+    "caption": "#training",
+    "profile": "../images/ronaldo.png"
   },
   {
-    "id": 6,
+    "id": 7,
     "img": "./images/asmiPost.png",
     "likesCount": 12000,
-    "commentsCount": "200"
+    "commentsCount": "200",
+    "uploadedon": "1 day ago"
   }
 ]
