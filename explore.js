@@ -140,7 +140,7 @@ function logOut() {
 }
 // fetching data
 const exploreContents = document.querySelector(".explore-contents");
-fetch("./json/explore.json")
+fetch("http://localhost/Instagram-clone/Explore.php")
   .then((res) => res.json())
   .then((data) => {
     // data.forEach((item) => {

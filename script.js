@@ -161,7 +161,7 @@ function postSettings() {
 const newsFeedContainer = document.getElementById("newsfeed-posts");
 const newsFeedContent = document.createElement("div");
 newsFeedContent.className = "news-feed-content";
-fetch("./json/newsfeed.json")
+fetch("http://localhost/Instagram-clone/Newsfeed.php")
   .then((res) => res.json())
   .then((data) => {
     data.forEach((item) => {
@@ -250,7 +250,7 @@ const notificationsuggestionlists = document.getElementById(
   "notification-suggestion-lists"
 );
 async function fetchSuggestion() {
-  const res = await fetch("./json/suggestions.json");
+  const res = await fetch("http://localhost/Instagram-clone/Suggestion.php");
   const data = await res.json();
   data.forEach((item) => {
     const suggestedProfiles = document.createElement("div");
@@ -304,7 +304,7 @@ async function fetchSuggestion() {
 fetchSuggestion();
 // stories fetch
 const homestories = document.querySelector(".insta-stories");
-fetch("./json/stories.json")
+fetch("http://localhost/Instagram-clone/Stories.php")
   .then((res) => res.json())
   .then((data) => {
     data.forEach((item) => {
