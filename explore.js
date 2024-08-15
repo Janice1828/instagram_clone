@@ -138,12 +138,10 @@ function logOut() {
   window.location.href = "./login.html";
   sessionStorage.setItem("loggedIn", "");
 }
-// fetching data
 const exploreContents = document.querySelector(".explore-contents");
-fetch("http://localhost/Instagram-clone/Explore.php")
+fetch("./json/explore.json")
   .then((res) => res.json())
   .then((data) => {
-    // data.forEach((item) => {
     for (let i = 0; i < data.length; i++) {
       const col = document.createElement("div");
       col.className = "col-4 explore-contents-col cursor-pointer";
