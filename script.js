@@ -164,6 +164,7 @@ newsFeedContent.className = "news-feed-content";
 fetch("./json/newsfeed.json")
   .then((res) => res.json())
   .then((data) => {
+    console.log(data);
     data.forEach((item) => {
       const card = document.createElement("div");
       card.className = "card";
