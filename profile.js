@@ -139,14 +139,14 @@ function createPosts() {
     }, 100);
   }
 }
-const loggedInStatus = sessionStorage.getItem("loggedIn");
-if (loggedInStatus) {
-  if (!loggedInStatus == "true") {
-    window.location.href = "./login.html";
-  }
-} else {
-  window.location.href = "./login.html";
-}
+// const loggedInStatus = sessionStorage.getItem("loggedIn");
+// if (loggedInStatus) {
+//   if (!loggedInStatus == "true") {
+//     window.location.href = "./login.html";
+//   }
+// } else {
+//   window.location.href = "./login.html";
+// }
 const userName = document.querySelector(".user-name");
 const name = document.getElementById("name");
 const getUsername = localStorage.getItem("userName");
@@ -156,7 +156,7 @@ name.innerHTML = getfullName;
 
 function logOut() {
   window.location.href = "./login.html";
-  sessionStorage.setItem("loggedIn", "");
+  // sessionStorage.setItem("loggedIn", "");
 }
 const profileSetting = document.getElementById("profile-settings");
 function displaySettings() {

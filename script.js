@@ -124,18 +124,18 @@ function displayMoreSettings() {
     }, 100);
   }
 }
-const loggedInStatus = sessionStorage.getItem("loggedIn");
-if (loggedInStatus) {
-  if (!loggedInStatus == "true") {
-    window.location.href = "./login.html";
-  }
-} else {
-  window.location.href = "./login.html";
-}
+// const loggedInStatus = sessionStorage.getItem("loggedIn");
+// if (loggedInStatus) {
+//   if (!loggedInStatus == "true") {
+//     window.location.href = "./login.html";
+//   }
+// } else {
+//   window.location.href = "./login.html";
+// }
 
 function logOut() {
   window.location.href = "./login.html";
-  sessionStorage.setItem("loggedIn", "");
+  // sessionStorage.setItem("loggedIn", "");
 }
 function postSettings() {
   const postSettings = document.getElementById("post-settings");

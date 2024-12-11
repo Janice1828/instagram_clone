@@ -122,14 +122,14 @@ function createPosts() {
     }, 100);
   }
 }
-const loggedInStatus = sessionStorage.getItem("loggedIn");
-if (loggedInStatus) {
-  if (!loggedInStatus == "true") {
-    window.location.href = "./login.html";
-  }
-} else {
-  window.location.href = "./login.html";
-}
+// const loggedInStatus = sessionStorage.getItem("loggedIn");
+// if (loggedInStatus) {
+//   if (!loggedInStatus == "true") {
+//     window.location.href = "./login.html";
+//   }
+// } else {
+//   window.location.href = "./login.html";
+// }
 
 function logOut() {
   window.location.href = "./login.html";
